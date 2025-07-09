@@ -176,7 +176,7 @@
   }
 
   .project-card {
-    @apply group relative overflow-hidden rounded-xl;
+    @apply relative overflow-hidden rounded-xl;
     background: hsl(var(--surface) / 0.5);
     border: 1px solid hsl(var(--border) / 0.3);
     transition: var(--transition-spring);

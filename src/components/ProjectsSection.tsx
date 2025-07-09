@@ -79,7 +79,7 @@ const ProjectsSection = () => {
           {/* Featured Projects */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {featuredProjects.map((project, index) => (
-              <div key={index} className="project-card p-6 rounded-xl">
+              <div key={index} className="project-card group p-6 rounded-xl">
                 <div className="relative mb-6 overflow-hidden rounded-lg">
                   <img 
                     src={project.image} 
@@ -126,7 +126,7 @@ const ProjectsSection = () => {
             <h3 className="text-2xl font-semibold mb-8 text-center">Other Projects</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project, index) => (
-                <div key={index} className="project-card p-6 rounded-xl">
+                <div key={index} className="project-card group p-6 rounded-xl">
                   <div className="relative mb-4 overflow-hidden rounded-lg">
                     <img 
                       src={project.image} 
