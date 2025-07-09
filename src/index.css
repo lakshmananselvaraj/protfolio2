@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Dark Portfolio Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark Theme Base Colors */
+    --background: 222 84% 3.5%;
+    --foreground: 210 40% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 84% 4%;
+    --popover-foreground: 210 40% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Vibrant Cyan-Blue Primary */
+    --primary: 195 100% 60%;
+    --primary-foreground: 222 84% 4%;
+    --primary-glow: 195 100% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Dark Secondary */
+    --secondary: 217 32% 15%;
+    --secondary-foreground: 210 40% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Dark Grays */
+    --muted: 217 32% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Variations */
+    --accent: 195 100% 60%;
+    --accent-foreground: 222 84% 4%;
+    --accent-hover: 195 100% 70%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 195 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --surface: 222 84% 6%;
+    --surface-hover: 222 84% 8%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 60%), hsl(195 100% 75%));
+    --gradient-dark: linear-gradient(135deg, hsl(222 84% 3.5%), hsl(222 84% 6%));
+    --gradient-glow: linear-gradient(135deg, hsl(195 100% 60% / 0.1), hsl(195 100% 75% / 0.05));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(195 100% 60% / 0.15);
+    --shadow-card: 0 10px 40px hsl(222 84% 2% / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +123,68 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    background: var(--gradient-dark);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .card-surface {
+    @apply bg-surface border border-border/50 backdrop-blur-sm;
+    background: hsl(var(--surface) / 0.7);
+    box-shadow: var(--shadow-card);
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 text-muted-foreground hover:text-foreground transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    content: '';
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .skill-item {
+    @apply px-4 py-2 bg-surface border border-border/50 rounded-lg text-sm font-medium;
+    transition: var(--transition-smooth);
+  }
+
+  .skill-item:hover {
+    @apply border-primary/50 shadow-md;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.1);
+  }
+
+  .project-card {
+    @apply group relative overflow-hidden rounded-xl;
+    background: hsl(var(--surface) / 0.5);
+    border: 1px solid hsl(var(--border) / 0.3);
+    transition: var(--transition-spring);
+  }
+
+  .project-card:hover {
+    @apply scale-[1.02];
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: var(--shadow-card), 0 0 30px hsl(var(--primary) / 0.1);
   }
 }
