@@ -4,59 +4,83 @@ const AchievementsSection = () => {
   const achievements = [
     {
       icon: Trophy,
-      title: "Hackathon Winner",
-      description: "1st Place at TechCrunch Disrupt 2023",
-      date: "2023",
+      title: "Kongu College Hackathon Winner",
+      description: "First place in college hackathon competition",
+      date: "2024",
       category: "Competition",
-      details: "Led a team of 4 developers to create an AI-powered sustainability app"
+      details: "Won the hackathon competition at Kongu Engineering College demonstrating innovative problem-solving skills"
     },
     {
       icon: Star,
-      title: "Open Source Contributor",
-      description: "500+ GitHub contributions",
-      date: "2020-2024",
-      category: "Community",
-      details: "Active contributor to React, Node.js, and various open-source projects"
+      title: "Thiran Technologies Hackathon Winner",
+      description: "Victory in industry hackathon challenge",
+      date: "2024",
+      category: "Competition",
+      details: "Secured winning position in Thiran Technologies hackathon showcasing technical excellence"
     },
     {
       icon: Target,
-      title: "Performance Optimization",
-      description: "Improved app performance by 75%",
-      date: "2023",
-      category: "Technical",
-      details: "Optimized a critical e-commerce platform serving 1M+ daily users"
+      title: "ICT Hackathon Achievement",
+      description: "Excellence in ICT hackathon competition",
+      date: "2024",
+      category: "Competition",
+      details: "Demonstrated outstanding performance in Information and Communication Technology hackathon"
     },
     {
       icon: Users,
-      title: "Team Leadership",
-      description: "Led a team of 8 developers",
-      date: "2022-2024",
-      category: "Leadership",
-      details: "Successfully managed and mentored a diverse development team"
+      title: "International Conference Participation",
+      description: "Active participation in international conferences",
+      date: "2023-2024",
+      category: "Academic",
+      details: "Presented research work and participated in multiple international academic conferences"
     },
     {
       icon: Zap,
-      title: "Innovation Award",
-      description: "Best Innovation at DevCon 2022",
-      date: "2022",
-      category: "Innovation",
-      details: "Created a revolutionary code deployment system using ML algorithms"
+      title: "Department Excellence Award 2024-25",
+      description: "Excellent efforts and academic achievements",
+      date: "2024-25",
+      category: "Academic",
+      details: "Recognized by department for outstanding academic performance and exceptional efforts in studies"
     },
     {
       icon: TrendingUp,
-      title: "Revenue Impact",
-      description: "Generated $2M+ additional revenue",
-      date: "2023",
-      category: "Business",
-      details: "Developed features that directly increased company revenue by 40%"
+      title: "National Level Mathematical Competition",
+      description: "Achievement in national mathematics competition",
+      date: "2022",
+      category: "Academic",
+      details: "Secured recognition in national level mathematical competition demonstrating analytical skills"
+    },
+    {
+      icon: Trophy,
+      title: "Grant Certification Design Pattern",
+      description: "Certification in design pattern methodology",
+      date: "2022",
+      category: "Technical",
+      details: "Achieved grant certification for excellence in design pattern implementation and software architecture"
+    },
+    {
+      icon: Star,
+      title: "House of Metazord Mentor",
+      description: "Event mentor for all House of Metazord activities",
+      date: "2023-2024",
+      category: "Leadership",
+      details: "Served as mentor for House of Metazord organizing and guiding various technical and cultural events"
+    },
+    {
+      icon: Target,
+      title: "Department Security Team Member",
+      description: "One year tenure in department security",
+      date: "2023-2024",
+      category: "Responsibility",
+      details: "Dedicated one year service in department security ensuring safety and maintaining academic environment"
     }
   ];
 
   const highlights = [
-    { label: "Projects Delivered", value: "50+", description: "Successfully completed projects" },
-    { label: "Team Members Mentored", value: "15+", description: "Junior developers guided" },
-    { label: "Code Reviews", value: "1000+", description: "Pull requests reviewed" },
-    { label: "Bug Resolution Rate", value: "98%", description: "Issues resolved on time" }
+    { label: "Hackathon Wins", value: "3", description: "Competition victories achieved" },
+    { label: "Academic Awards", value: "4", description: "Recognition for excellence" },
+    { label: "Leadership Roles", value: "2", description: "Mentor and security positions" },
+    { label: "Conference Participation", value: "Multiple", description: "International presentations" }
   ];
 
   return (
@@ -111,49 +135,6 @@ const AchievementsSection = () => {
                 <div className="text-sm text-muted-foreground">{highlight.description}</div>
               </div>
             ))}
-          </div>
-
-          {/* Recognition Timeline */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-semibold text-center mb-8">Recognition Timeline</h3>
-            <div className="relative max-w-4xl mx-auto">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-border"></div>
-              
-              <div className="space-y-8">
-                {[
-                  { year: "2024", event: "Senior Developer Promotion", description: "Promoted to Senior Full Stack Developer" },
-                  { year: "2023", event: "Hackathon Victory", description: "Won TechCrunch Disrupt with AI sustainability app" },
-                  { year: "2022", event: "Innovation Award", description: "Best Innovation at DevCon for ML deployment system" },
-                  { year: "2021", event: "Team Lead Role", description: "Appointed as Technical Team Lead" },
-                  { year: "2020", event: "First Open Source", description: "Made first major open source contribution" }
-                ].map((item, index) => (
-                  <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                    <div className="flex-1 text-right pr-8">
-                      {index % 2 === 0 && (
-                        <div className="card-surface p-4 rounded-lg">
-                          <div className="font-semibold text-primary">{item.event}</div>
-                          <div className="text-sm text-muted-foreground">{item.description}</div>
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold z-10">
-                      {item.year}
-                    </div>
-                    
-                    <div className="flex-1 text-left pl-8">
-                      {index % 2 === 1 && (
-                        <div className="card-surface p-4 rounded-lg">
-                          <div className="font-semibold text-primary">{item.event}</div>
-                          <div className="text-sm text-muted-foreground">{item.description}</div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

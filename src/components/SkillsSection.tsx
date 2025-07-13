@@ -10,74 +10,46 @@ const SkillsSection = () => {
       label: 'Frontend',
       icon: Code,
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'JavaScript', level: 95 },
-        { name: 'Next.js', level: 85 },
-        { name: 'Vue.js', level: 80 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'TailwindCSS', level: 90 },
-        { name: 'SASS/SCSS', level: 85 }
+        { name: 'HTML', level: 95 },
+        { name: 'CSS', level: 90 },
+        { name: 'JavaScript', level: 85 },
+        { name: 'React', level: 88 },
+        { name: 'TypeScript', level: 82 },
+        { name: 'Bootstrap', level: 88 },
+        { name: 'Tailwind CSS', level: 92 },
+        { name: 'Responsive Design', level: 90 }
       ]
     },
     {
-      id: 'backend',
-      label: 'Backend',
+      id: 'programming',
+      label: 'Programming',
       icon: Server,
       skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'Express.js', level: 88 },
-        { name: 'Django', level: 80 },
-        { name: 'FastAPI', level: 75 },
-        { name: 'REST APIs', level: 92 },
-        { name: 'GraphQL', level: 78 },
-        { name: 'Microservices', level: 82 }
+        { name: 'Python', level: 88 },
+        { name: 'C', level: 85 },
+        { name: 'C++', level: 85 },
+        { name: 'Flask', level: 82 },
+        { name: 'Object-Oriented Programming', level: 87 },
+        { name: 'Data Structures', level: 85 },
+        { name: 'Algorithms', level: 83 },
+        { name: 'Problem Solving', level: 90 }
       ]
     },
     {
-      id: 'database',
-      label: 'Database',
+      id: 'analysis',
+      label: 'Data Analysis',
       icon: Database,
       skills: [
-        { name: 'PostgreSQL', level: 88 },
-        { name: 'MongoDB', level: 85 },
-        { name: 'Redis', level: 80 },
-        { name: 'MySQL', level: 82 },
-        { name: 'Prisma', level: 85 },
-        { name: 'Mongoose', level: 80 },
-        { name: 'SQL', level: 90 },
-        { name: 'Database Design', level: 85 }
-      ]
-    },
-    {
-      id: 'cloud',
-      label: 'Cloud & DevOps',
-      icon: Cloud,
-      skills: [
-        { name: 'AWS', level: 85 },
-        { name: 'Docker', level: 88 },
-        { name: 'Kubernetes', level: 75 },
-        { name: 'Vercel', level: 90 },
-        { name: 'Netlify', level: 85 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'Terraform', level: 70 },
-        { name: 'Git', level: 95 }
-      ]
-    },
-    {
-      id: 'mobile',
-      label: 'Mobile',
-      icon: Smartphone,
-      skills: [
-        { name: 'React Native', level: 80 },
-        { name: 'Expo', level: 85 },
-        { name: 'Flutter', level: 70 },
-        { name: 'Mobile UI/UX', level: 78 },
-        { name: 'App Store Deploy', level: 75 },
-        { name: 'Push Notifications', level: 80 },
-        { name: 'Mobile Performance', level: 75 },
-        { name: 'Native Modules', level: 70 }
+        { name: 'Data Analysis', level: 85 },
+        { name: 'Python for Data Science', level: 82 },
+        { name: 'Data Visualization', level: 80 },
+        { name: 'Statistical Analysis', level: 78 },
+        { name: 'Pattern Recognition', level: 80 },
+        { name: 'Data Processing', level: 83 },
+        { name: 'Research & Analytics', level: 85 },
+        { name: 'Report Generation', level: 82 },
+        { name: 'Excel', level: 88 },
+        { name: 'SQL', level: 85 }
       ]
     },
     {
@@ -85,14 +57,14 @@ const SkillsSection = () => {
       label: 'Design & Tools',
       icon: Palette,
       skills: [
-        { name: 'Figma', level: 85 },
-        { name: 'Adobe XD', level: 80 },
-        { name: 'UI/UX Design', level: 82 },
+        { name: 'UI/UX Design', level: 88 },
         { name: 'Responsive Design', level: 95 },
+        { name: 'User Interface Design', level: 85 },
+        { name: 'Design Principles', level: 82 },
         { name: 'Prototyping', level: 80 },
-        { name: 'Design Systems', level: 85 },
-        { name: 'User Research', level: 75 },
-        { name: 'Accessibility', level: 88 }
+        { name: 'User Experience', level: 85 },
+        { name: 'Visual Design', level: 83 },
+        { name: 'Accessibility', level: 80 }
       ]
     }
   ];
@@ -132,45 +104,45 @@ const SkillsSection = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 perspective-1000">
             {activeSkills.map((skill, index) => (
               <div 
                 key={skill.name} 
-                className="group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group skills-card-3d glow-on-hover"
+                style={{ 
+                  animationDelay: `${index * 0.1}s`,
+                  transformStyle: 'preserve-3d'
+                }}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium text-foreground">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                </div>
-                
-                <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-                  <div 
-                    className="h-2 bg-gradient-to-r from-primary to-primary-glow rounded-full transition-all duration-1000 ease-out"
-                    style={{ 
-                      width: `${skill.level}%`,
-                      animationDelay: `${index * 0.1}s`
-                    }}
-                  ></div>
+                <div className="bg-gradient-to-br from-surface to-surface-hover p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-border/50 hover:border-primary/30 relative overflow-hidden">
+                  {/* 3D Background Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary-glow/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  {/* Glowing Border Effect */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/20 to-primary-glow/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="font-semibold text-foreground text-lg group-hover:text-primary transition-colors duration-300">{skill.name}</span>
+                      <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded-full group-hover:bg-primary/20 group-hover:text-primary transition-all duration-300">{skill.level}%</span>
+                    </div>
+                    
+                    <div className="w-full bg-muted rounded-full h-3 overflow-hidden shadow-inner">
+                      <div 
+                        className="h-3 bg-gradient-to-r from-primary via-primary-glow to-primary rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
+                        style={{ 
+                          width: `${skill.level}%`,
+                          animationDelay: `${index * 0.1}s`
+                        }}
+                      >
+                        {/* Animated Shimmer Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Skills Summary */}
-          <div className="grid md:grid-cols-3 gap-6 mt-16">
-            <div className="card-surface p-6 rounded-xl text-center">
-              <div className="text-2xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Technologies</div>
-            </div>
-            <div className="card-surface p-6 rounded-xl text-center">
-              <div className="text-2xl font-bold text-primary mb-2">5+</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="card-surface p-6 rounded-xl text-center">
-              <div className="text-2xl font-bold text-primary mb-2">100+</div>
-              <div className="text-muted-foreground">Projects Completed</div>
-            </div>
           </div>
         </div>
       </div>

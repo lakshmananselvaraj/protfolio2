@@ -3,28 +3,28 @@ import { GraduationCap, Calendar, MapPin } from 'lucide-react';
 const EducationSection = () => {
   const education = [
     {
-      degree: "Master of Computer Science",
-      institution: "Stanford University",
-      period: "2018 - 2020",
-      location: "Stanford, CA",
-      description: "Specialized in Software Engineering and Artificial Intelligence. Graduated Magna Cum Laude with a GPA of 3.8/4.0.",
-      courses: ["Advanced Algorithms", "Machine Learning", "Software Architecture", "Database Systems"]
+      degree: "Bachelor of Technology in Artificial Intelligence and Data Science",
+      institution: "KGiSL Institute of Technology",
+      period: "2022 - 2026",
+      location: "Coimbatore, Tamil Nadu",
+      description: "Currently pursuing B.Tech in Artificial Intelligence and Data Science with focus on machine learning, data analytics, and AI technologies.",
+      courses: ["Data Structures", "Machine Learning", "Artificial Intelligence", "Data Analytics", "Python Programming", "Deep Learning", "Statistics", "Database Management"]
     },
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University of California, Berkeley",
-      period: "2014 - 2018",
-      location: "Berkeley, CA",
-      description: "Strong foundation in computer science fundamentals, mathematics, and software development.",
-      courses: ["Data Structures", "Computer Networks", "Operating Systems", "Web Development"]
+      degree: "Higher Secondary Education (12th)",
+      institution: "Government Higher Secondary School, Keelapoovani",
+      period: "2021 - 2022",
+      location: "Tuticorin, Tamil Nadu",
+      description: "Completed Higher Secondary Education with focus on Science and Mathematics, preparing for engineering entrance examinations.",
+      courses: ["Mathematics", "Physics", "Chemistry", "Computer Science"]
     },
     {
-      degree: "High School Diploma",
-      institution: "Lincoln High School",
-      period: "2010 - 2014",
-      location: "San Francisco, CA",
-      description: "Valedictorian with focus on STEM subjects. Active in programming club and math olympiad.",
-      courses: ["Advanced Placement Computer Science", "Calculus", "Physics", "Statistics"]
+      degree: "Secondary School Certificate (10th)",
+      institution: "Government Higher Secondary School, Keelapoovani",
+      period: "2019 - 2020",
+      location: "Tuticorin, Tamil Nadu",
+      description: "Completed secondary education with strong foundation in mathematics and science subjects.",
+      courses: ["Mathematics", "Science", "English", "Tamil", "Social Science"]
     }
   ];
 

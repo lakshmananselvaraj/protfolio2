@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, BookOpen, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -8,20 +8,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "john.doe@example.com",
-      href: "mailto:john.doe@example.com"
+      value: "lakshmananselvaraj7999@gmail.com",
+      href: "mailto:lakshmananselvaraj7999@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 7904870129",
+      href: "tel:+917904870129"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
-      href: "https://maps.google.com/?q=San+Francisco,+CA"
+      value: "Coimbatore, India",
+      href: "https://maps.google.com/?q=Coimbatore,+India"
     }
   ];
 
@@ -29,20 +29,20 @@ const ContactSection = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/lakshmananselvaraj",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/lakshmananselvaraj123/",
       color: "hover:text-blue-400"
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400"
+      icon: BookOpen,
+      label: "Medium",
+      href: "https://medium.com/@lakshmananselvaraj7999",
+      color: "hover:text-green-400"
     }
   ];
 
@@ -121,9 +121,23 @@ const ContactSection = () => {
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="font-medium text-foreground">Available for Work</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground mb-4">
                     Currently open to new freelance projects and full-time opportunities
                   </p>
+                  
+                  {/* CV Download Button */}
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="w-full border-primary/50 hover:border-primary"
+                    onClick={() => {
+                      // Open PDF in new tab for viewing
+                      window.open('/cv-lakshmanan-s.pdf', '_blank');
+                    }}
+                  >
+                    <Download className="mr-2" size={16} />
+                    View My Resume
+                  </Button>
                 </div>
               </div>
             </div>
@@ -214,7 +228,7 @@ const ContactSection = () => {
           {/* Footer */}
           <div className="text-center mt-16 pt-8 border-t border-border">
             <p className="text-muted-foreground">
-              © 2024 John Doe. Built with React, TypeScript, and TailwindCSS.
+              © 2024 Lakshmanan S copy right
             </p>
           </div>
         </div>

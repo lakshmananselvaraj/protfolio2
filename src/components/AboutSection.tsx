@@ -4,23 +4,23 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code"
+      title: "Frontend Skills",
+      description: "React, TypeScript, HTML, CSS, Bootstrap, Tailwind CSS for responsive design"
     },
     {
       icon: Brain,
-      title: "Problem Solving",
-      description: "Analytical thinking to solve complex challenges"
+      title: "Programming",
+      description: "Python, C, C++, TypeScript and Flask framework development"
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Always exploring new technologies and solutions"
+      title: "UI/UX Design",
+      description: "Creating intuitive and user-friendly interfaces"
     },
     {
       icon: Target,
-      title: "Goal Oriented",
-      description: "Focused on delivering results that matter"
+      title: "Data Analysis",
+      description: "Analyzing data patterns and driving insights"
     }
   ];
 
@@ -34,7 +34,7 @@ const AboutSection = () => {
               About <span className="gradient-text">Me</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm a passionate developer with 5+ years of experience creating digital solutions
+              I'm Lakshmanan S, a passionate Frontend Developer specializing in React, TypeScript, modern web technologies, programming, and data analysis
             </p>
           </div>
 
@@ -44,17 +44,16 @@ const AboutSection = () => {
               <h3 className="text-2xl font-semibold mb-6">My Story</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I started my journey in software development with a curiosity about how things work. 
-                  What began as a hobby quickly became a passion, and now it's my career.
+                  I started my journey in Frontend development with a passion for creating beautiful and functional web experiences. 
+                  What began as learning HTML and CSS evolved into mastering React, TypeScript, Bootstrap, Tailwind CSS, and modern design principles.
                 </p>
                 <p>
-                  I specialize in full-stack development with a focus on creating intuitive user 
-                  experiences and robust backend systems. I believe in writing clean, maintainable 
-                  code and following best practices.
+                  I specialize in Frontend development with expertise in React and TypeScript for building dynamic user interfaces, 
+                  responsive design, and data analysis. I combine technical programming skills in Python, C, and C++ with design thinking to deliver exceptional user experiences.
                 </p>
                 <p>
-                  When I'm not coding, you can find me exploring new technologies, contributing to 
-                  open source projects, or sharing knowledge with the developer community.
+                  When I'm not coding, you can find me exploring new web technologies, working with React components, TypeScript development, Flask framework, 
+                  analyzing data patterns, or creating intuitive UI/UX designs that solve real-world problems.
                 </p>
               </div>
             </div>
@@ -63,16 +62,20 @@ const AboutSection = () => {
               <h3 className="text-2xl font-semibold mb-6">What I Do</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Frontend Development:</strong> Creating responsive, 
-                  interactive user interfaces using React, TypeScript, and modern CSS frameworks.
+                  <strong className="text-foreground">Frontend Development:</strong> Building responsive 
+                  and interactive user interfaces using React, TypeScript, HTML, CSS, Bootstrap, and Tailwind CSS for modern web applications.
                 </p>
                 <p>
-                  <strong className="text-foreground">Backend Development:</strong> Building scalable 
-                  APIs and server-side applications with Node.js, Python, and database management.
+                  <strong className="text-foreground">Programming Languages:</strong> Proficient in 
+                  Python, C, C++, and TypeScript for various development needs and problem-solving applications.
                 </p>
                 <p>
-                  <strong className="text-foreground">DevOps & Cloud:</strong> Deploying and maintaining 
-                  applications using cloud platforms, containers, and CI/CD pipelines.
+                  <strong className="text-foreground">Web Framework:</strong> Developing web applications 
+                  using React for frontend components and Flask framework for backend integration and API development.
+                </p>
+                <p>
+                  <strong className="text-foreground">Design & Analysis:</strong> Creating user-friendly 
+                  interfaces with UI/UX principles and performing data analysis to drive insights.
                 </p>
               </div>
             </div>

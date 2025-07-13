@@ -26,7 +26,7 @@ const ProjectsSection = () => {
     {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website built with React and TypeScript showcasing my projects, skills, and achievements. Features dark/light mode, smooth animations, and optimized performance with a clean, professional design.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "https://github.com/lakshmananselvaraj",
       demo: "https://github.com/lakshmananselvaraj",
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
     {
       title: "Hospital Operations Dashboard",
       description: "The project focuses on optimizing hospital operations by visualizing real-time data related to patient flow, bed occupancy, staff allocation, and inventory management. It supports healthcare administrators in making informed decisions through dynamic and interactive dashboards.",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop",
+      image: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&h=400&fit=crop",
       tech: ["Power BI", "Excel", "SQL", "DAX"],
       github: "https://github.com/lakshmananselvaraj",
       featured: false
