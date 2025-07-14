@@ -68,7 +68,7 @@ const AchievementsSection = () => {
     },
     {
       icon: Target,
-      title: "Department Security Team Member",
+      title: "Department Secretary Team Member",
       description: "One year tenure in department security",
       date: "2023-2024",
       category: "Responsibility",
